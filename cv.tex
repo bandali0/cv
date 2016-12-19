@@ -1,0 +1,258 @@
+% Amin Bandali - Curriculum Vitae
+%
+% Copyright (C) 2016 Amin Bandali <amin@aminb.org>
+% https://aminb.org/
+%
+% Based on Jason R. Blevins's Curriculum Vitae template,
+% Copyright (C) 2004-2016 Jason R. Blevins <jrblevin@sdf.org>
+% http://jblevins.org/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely.  No attribution is
+% required in any resulting documents.  I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{enumitem}
+
+% Fonts
+\usepackage{graphicx}
+\usepackage{fontspec}
+\setmainfont[Numbers=Lining]{EB Garamond}
+\newfontfamily{\smallcaps}[RawFeature={+c2sc,+scmp}]{EB Garamond}
+\newfontfamily{\bfseries}[FakeBold=2]{EB Garamond}
+\newcommand{\amper}{{\fontspec[Scale=.9]{EB Garamond}\selectfont\itshape\&}}
+
+%% Load Microtype with default settings. This will use the
+%% EB-Garamond protrusion definitions if present.
+\usepackage{microtype}
+
+
+\def\name{Amin Bandali}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {Programming Languages, Haskell, Rust, Formal Methods, Type
+    Systems, Proof Systems, Automated Provers},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 9.0in},
+  left=1.0in,
+  top=1.0in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets and compact spacing
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+    \setlength{\itemsep}{0.25em}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0.25em}
+  }
+}{
+  \end{list}
+}
+\setlist[enumerate]{itemsep=0.25em}
+
+\begin{document}
+
+% Place name at left
+{\huge \name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\bigskip
+
+\begin{minipage}[t]{0.495\textwidth}
+  Email: \href{mailto:amin9@my.yorku.ca}{amin9@my.yorku.ca} \\
+  Homepage: \href{https://aminb.org}{https://aminb.org} \\
+  Phone: available upon request
+\end{minipage}
+
+\section*{Research Interests}
+
+\begin{itemize}
+\item Functional Programming and functional languages
+\item Formal methods, especially type systems, proof systems, and automated
+  provers
+\item Verification, Haskell, and Rust
+\end{itemize}
+
+\section*{Education}
+
+\begin{itemize}
+\item {\large B.Sc. Honours Computer Science}\, |\, {\small 2013--present}
+
+  \textit{York University}, Canada
+
+  \begin{itemize}
+  \item \textbf{GPA:} 7.9/9.0
+  \item \textbf{Expected completion:} December 2017
+  \item \textbf{Relevant courses:} System Specification \amper\
+    Refinement, Operating System Design, Computational Complexity, Artificial
+    Intelligence \amper\ Logic Programming, Design \amper\ Analysis of
+    Algorithms.
+  \item Finished first year (2013-14) at \textit{Carleton University} with a GPA
+    of 11.0/12.0 then transferred to \textit{York University} in Fall 2014.
+  \end{itemize}
+  
+\end{itemize}
+
+\section*{Research Experience}
+
+\begin{itemize}
+\item {\large Software Engineering Lab, } York University\, |\, {\small summer 2016}
+
+  \textit{Research Student}
+
+  \begin{itemize}
+  \item Semester project: As an undergraduate research student, I
+    worked on \textbf{Literate Unit-B}, the verifier for Unit-B, a new
+    formal method focused on formal verification of reactive, concurrent
+    and distributed systems.
+
+    From the Literate Unit-B codebase (written in Haskell), I decoupled the
+    logic module and used it to build \textbf{Unit-B Web}, a web interface using
+    Literate Unit-B to do predicate calculus proofs. \linebreak Unit-B Web, also
+    written in Haskell, supports the \LaTeX\ syntax of the Unit-B logic, renders
+    user input on the page, and calls the sequent prover of the logic
+    module, which uses the Z3 SMT solver to check the validity of user
+    input.
+
+  \item Volunteer work: I'm currently working on implementing subtyping for
+    Literate Unit-B.
+  \end{itemize}
+  \end{itemize}
+
+\section*{Professional Experience}
+\begin{itemize}
+\item {\large Lotek Wireless Inc., } Newmarket, Canada\, |\, {\small 2015--2016}
+
+  \textit{Software Developer}
+
+  \begin{itemize}
+  \item Designed and implemented various applications in C\# and C to test and
+    analyze a satellite pass prediction algorithm for predicting the pass
+    windows of Argos satellites, for scheduling send times of data collected by
+    company's wildlife tracking products.
+
+  \item Designed and developed an Employee Portal web application in C\# and the
+    MVC framework, used by employees for accessing various data catalogs and
+    archives.
+  \end{itemize}
+  \vspace{.25em}
+
+\item {\large Athlete Builder, } Ottawa, Canada\, |\, {\small 2013--2014}
+
+  \textit{Software Developer}
+
+  \begin{itemize}
+  \item Developed the Backend of Athlete Builder platform in C\# and MVC.
+  \item Was a key role in development of the platform core.
+  \item Developed the alpha version of Athlete Builder Android app in Java.
+  \end{itemize}
+\end{itemize}
+
+\section*{Volunteer Activities}
+
+\begin{itemize}
+
+\item {\large EmacsConf 2015, } \href{http://emacsconf.org}{emacsconf.org}\, |\,
+  {\small summer 2015}
+
+  \textit{Organizer}
+
+  \begin{itemize}
+  \item EmacsConf is a conference about the joy of Emacs and writing Emacs
+    Lisp. I was a key organizer and in charge of setting up and maintaining
+    several vital pieces of the EmacsConf infrastructure.
+  \end{itemize}
+  \vspace{.25em}
+
+\item {\large VONICAL Inc., } Ottawa, Canada\, |\, {\small spring 2013}
+
+  \textit{Application Developer}
+
+  \begin{itemize}
+  \item As a volunteer, worked on development of EARN (Employment Accessibility
+    Resource Network) portal using the Anahita social networking platform, in
+    PHP under Linux.
+  \end{itemize}
+  \vspace{.25em}
+
+\item {\large Hire Works Inc., } Ottawa, Canada\, |\, {\small winter 2013}
+
+  \textit{Mobile \& Web Developer}
+
+  \begin{itemize}
+  \item As a volunteer, I worked on a variety of web and mobile projects for
+    Hire Works, Inc.
+  \end{itemize}
+  \vspace{.25em}
+
+\item {\large St. Brigid's Summer Camp, } Ottawa, Canada\, |\, {\small summer
+    2012}
+
+  \textit{Web Developer}
+
+  \begin{itemize}
+  \item As a volunteer, I re-designed and coded (from scratch) an updated and
+    revamped version of the photo gallery section of St. Brigid Summer Camp's
+    website in PHP and JavaScript. A refactored version of my code is deployed
+    and being used.
+  \end{itemize}
+  % \vspace{.25em}
+
+\end{itemize}
+
+
+\section*{Miscellaneous}
+
+\begin{itemize}
+\item \textit{Programming Languages:} Haskell, Rust, C, Python, Emacs Lisp,
+  \LaTeX, C\#, Java, JavaScript, C++.
+\item \textit{Platforms:} Arch Linux, Ubuntu and other distros, Android, macOS,
+  Windows.
+\item \textit{Tools:} Emacs, Git, Mercurial, Zsh, CI Systems (e.g. Travis CI),
+  Rodin, SQL DBs.
+\item \textit{Languages:} English (fluent), Persian (native), French (beginner).
+\end{itemize}
+
+
+% Footer
+\bigskip
+{\small Last updated: \today}
+
+\end{document}
