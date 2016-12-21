@@ -13,3 +13,9 @@ saving changes.
 [template]: http://jblevins.org/projects/cv-template/
 [fontspec]: https://www.ctan.org/pkg/fontspec?lang=en
 [ebgaramond]: http://www.georgduffner.at/ebgaramond/
+
+## License
+
+The source code is licensed under the LaTeX Project Public License, either
+version 1.3 of this license or (at your option) any later version.
+See [LICENSE](LICENSE).
