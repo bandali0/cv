@@ -18,14 +18,20 @@
 \usepackage{hyperref}
 \usepackage{geometry}
 \usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+% To enable correct spacing
+\usepackage{xspace}
+\pagestyle{fancy}
 
 % Fonts
 \usepackage{graphicx}
 \usepackage{fontspec}
-\setmainfont[Numbers=Lining]{EB Garamond}
-\setmonofont[Scale=0.85]{Ubuntu Mono}
-\newfontfamily{\smallcaps}[RawFeature={+c2sc,+scmp}]{EB Garamond}
-\newcommand{\amper}{{\fontspec[Scale=.9]{EB Garamond}\selectfont\itshape\&}}
+\setmainfont[Scale=0.95,SmallCapsFont={Equity Caps A},RawFeature=+c2sc]{Equity Text A}
+\setsansfont[Scale=0.95,SmallCapsFont={Concourse C4}]{Concourse T4}
+\setmonofont[Scale=0.9]{Triplicate T4c}
+% \newfontfamily{\smallcaps}[RawFeature={+c2sc,+scmp}]{Equity Text A}
+\newcommand{\amper}{{\fontspec[Scale=.9]{Equity Text A}\selectfont\itshape\&}}
 
 %% Load Microtype with default settings. This will use the
 %% EB-Garamond protrusion definitions if present.
@@ -39,8 +45,8 @@
   colorlinks = true,
   urlcolor = black,
   pdfauthor = {\name},
-  pdfkeywords = {Programming Languages, Haskell, Rust, Formal Methods, Type
-    Systems, Proof Systems, Automated Provers},
+  pdfkeywords = {Programming Languages, Functional Programming, Haskell, Rust,
+    Formal Methods, Type Systems, Proof Systems, Automated Provers},
   pdftitle = {\name: Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
   pdfpagemode = UseNone
@@ -52,10 +58,10 @@
   top=1.0in
 }
 
-% Customize page headers
-\pagestyle{myheadings}
-\markright{\name}
-\thispagestyle{empty}
+\pagestyle{fancy}
+\fancyhf{}% to clear existing header/footer
+\renewcommand\headrulewidth{0pt}
+\cfoot{\vspace*{-.25em}\textsc{Bandali CV --- page \thepage \xspace of \pageref*{LastPage}}}
 
 % Custom section fonts
 \usepackage{sectsty}
@@ -87,19 +93,23 @@
 
 \begin{document}
 
+\vspace*{-2em}
+
 % Place name at left
 {\huge \name}
 
 % Alternatively, print name centered and bold:
 %\centerline{\huge \bf \name}
 
-\bigskip
+\medskip
 
 \begin{minipage}[t]{0.495\textwidth}
   Email: \href{mailto:amin9@my.yorku.ca}{amin9@my.yorku.ca} \\
-  Homepage: \href{https://aminb.org}{https://aminb.org} \\
+  Site: \href{https://aminb.org}{https://aminb.org} \\
   Phone: available upon request
 \end{minipage}
+
+\vspace*{1em}
 
 \section*{Research Interests}
 
@@ -119,12 +129,13 @@
   \textit{York University}, Toronto, Canada
 
   \begin{itemize}
-  \item Expected completion: December 2017 \hspace{1em} GPA: 7.9/9.0
+  \item Expected completion: December 2017 \hspace{-.15em} | \hspace{-.15em}
+    GPA: 7.9/9.0
   \item Relevant courses: System Specification \amper\
     Refinement, Software Requirements Eng., Software Design, Operating
     Systems, Computational Complexity, Design \amper\ Analysis of Algorithms.
   \item Finished first year (2013-14) at \textit{Carleton University} with a GPA
-    of 11.0/12.0 then transferred to \textit{York University} in Fall 2014.
+    of 11.0/12.0, then transferred to \textit{York University} in Fall 2014.
   \end{itemize}
 
 %% \item {\large High School Diploma}\, |\, {\small 2013}
@@ -143,9 +154,9 @@
   \textit{Research Assistant}
 
   \begin{itemize}
-  \item I'm working on expanding and testing the \texttt{mathmodels} library,
-    collection of abstract mathematical collections written in Eiffel. I'll also
-    be modeling various pieces of software in TLA+.
+  \item I'm working on expanding and testing \texttt{mathmodels},
+    library implementing abstract mathematical collections written in Eiffel. I'll also
+    be modeling various pieces of software in $\textrm{TLA}^+$.
   \end{itemize}
 
 \item {\large Software Engineering Lab, } York University\, |\, {\small summer 2016}
@@ -162,7 +173,7 @@
     Literate Unit-B to do predicate calculus proofs. \linebreak Unit-B Web, also
     written in Haskell, supports the \LaTeX\ syntax of the Unit-B logic, renders
     user input on the page, and calls the sequent prover of the logic module,
-    which uses the Z3 SMT solver to check the validity of user input.
+    which uses the \textsc{z3 smt} solver to check the validity of user input.
 
   \item Further, I separated Literate Unit-B's type checker from its parser,
     allowing easier substitution of other type checking algorithms and in
@@ -260,11 +271,12 @@
   Source code available at
   \href{https://github.com/unitb/unitb-web}{https://github.com/unitb/unitb-web}
 
-\item \textit{tex2png-hs:} A tool for easily converting \TeX\ and \LaTeX\ to PNG
-  images. \verb#tex2png-hs# is a Haskell port of Xyne's \verb#tex2png# tool. It
-  is a wrapper around \verb#latex# and \verb#dvipng# and provides several
-  options for modifying its behaviour, such as cropping the whitespace around
-  the content, specifying the DPI, or inputting a full document.\\
+\item \textit{tex2png-hs:} A tool for easily converting \TeX\ and \LaTeX\ to
+  \textsc{PNG} images. \texttt{tex2png-hs} is a Haskell port of Xyne's
+  \texttt{tex2png} tool. It is a wrapper around \texttt{latex} and
+  \texttt{dvipng} and provides several options for modifying its behaviour, such
+  as cropping the whitespace around the content, specifying the \textsc{DPI}, or
+  inputting a full document.
   Source code available at
   \href{https://github.com/unitb/tex2png-hs}{https://github.com/unitb/tex2png-hs}
 
