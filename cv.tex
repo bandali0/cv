@@ -28,14 +28,11 @@
 \usepackage{graphicx}
 \usepackage{fontspec}
 \setmainfont[Scale=0.95,SmallCapsFont={Equity Caps A},RawFeature=+c2sc]{Equity Text A}
-\setsansfont[Scale=0.95,SmallCapsFont={Concourse C4}]{Concourse T4}
+\setsansfont[SmallCapsFont={Concourse C4}]{Concourse T4}
 \setmonofont[Scale=0.9]{Triplicate T4c}
-% \newfontfamily{\smallcaps}[RawFeature={+c2sc,+scmp}]{Equity Text A}
+\newfontfamily{\tallnums}[RawFeature={+ss02}]{Equity Text A}
+\newfontfamily{\largersans}[Scale=1.05,SmallCapsFont={Concourse C4}]{Concourse T4}
 \newcommand{\amper}{{\fontspec[Scale=.9]{Equity Text A}\selectfont\itshape\&}}
-
-%% Load Microtype with default settings. This will use the
-%% EB-Garamond protrusion definitions if present.
-\usepackage{microtype}
 
 
 \def\name{Amin Bandali}
@@ -93,7 +90,7 @@
 
 \begin{document}
 
-\vspace*{-2em}
+\vspace*{-3em}
 
 % Place name at left
 {\huge \name}
@@ -110,15 +107,6 @@
 \end{minipage}
 
 \vspace*{1em}
-
-\section*{Research Interests}
-
-\begin{itemize}
-\item Functional Programming and functional languages.
-\item Formal methods, especially type systems, proof systems, and automated
-  provers.
-\item Verification, Haskell, and Rust.
-\end{itemize}
 
 \section*{Education}
 
@@ -143,6 +131,15 @@
 %%   \textit{Glebe Collegiate Institute}, Ottawa, Canada
 
 %%   \hspace{1.3em} Average: 94.3\%
+\end{itemize}
+
+\section*{Research Interests}
+
+\begin{itemize}
+\item Functional programming and functional languages.
+\item Formal methods, especially type systems, proof systems, and automated
+  provers.
+\item Verification, Haskell, and Rust.
 \end{itemize}
 
 \section*{Research Experience}
@@ -179,6 +176,20 @@
     allowing easier substitution of other type checking algorithms and in
     preparation for implementing subtyping.
   \end{itemize}
+\end{itemize}
+
+\section*{Conference Talk}
+
+\begin{itemize}
+\item {\large \tallnums CUCSC 2017}
+
+  \begin{itemize}
+  \item {\largersans The Magic of Specifications and Type Systems}
+    (\hspace{.15mm}\href{https://static.aminb.org/cucsc-2017-slides.pdf}{pdf\hspace{.6mm}}), at
+    Canadian Undergraduate Computer Science Conference, University of Toronto,
+    Canada, Jun 15--17 2017.
+  \end{itemize}
+
 \end{itemize}
 
 \section*{Professional Experience}
